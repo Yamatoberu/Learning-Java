@@ -52,4 +52,3 @@ class SortingArray{
 		System.out.println("Duration: " + (endTime.getNano() - startTime.getNano())/1000000 + " milliseconds");
 	}
 }
-//WHY ISN'T NEWCOUNT ITERATING?!?!?!?!?!?!?!?!??!?!

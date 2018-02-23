@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 class SortingRandomArray{	
 	public static void main(String[] args){
 		ArrayList<Integer> randomArray = new ArrayList();
-		int limit = 1000000;
+		int limit = 100000;
 		for (int x = 1; x <= limit; x++){
 			randomArray.add((int) (Math.random() * 100));;
 		}

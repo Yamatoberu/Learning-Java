@@ -1,14 +1,17 @@
 import java.lang.Math;
 import java.util.ArrayList;
 import java.time.LocalDateTime;
+import java.util.Scanner;
 
 class SortingRandomArray{	
 	public static void main(String[] args){
-		ArrayList<Integer> randomArray = new ArrayList();
-		int limit = 100000;
-		for (int x = 1; x <= limit; x++){
-			randomArray.add((int) (Math.random() * 100));;
-		}
+		
+		// Prompt the user for how many numbers they want to sorted
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("How many numbers to sort? ");
+		int size = scanner.nextInt();
+		
+		ArrayList<Integer> randomArray = MakingList.createArray(size);
 		
 		// Getting the start time
 		LocalDateTime startTime = LocalDateTime.now();
@@ -42,9 +45,7 @@ class SortingRandomArray{
 		LocalDateTime endTime = LocalDateTime.now();
 		
 		// Displaying the duration
-		System.out.println("DURATION");
-		System.out.println((endTime.getMinute() - startTime.getMinute()) + " minutes");
-		System.out.println((endTime.getSecond() - startTime.getSecond()) + " seconds");
-		System.out.println((endTime.getNano() - startTime.getNano())/1000000 + " milliseconds");
+		System.out.println("Insertion Sort Duration:");
+		System.out.println((endTime.getMinute() - startTime.getMinute()) + ":" + (endTime.getSecond() - startTime.getSecond()) + "." + ((endTime.getNano() - startTime.getNano())/1000000));
 	}
 }

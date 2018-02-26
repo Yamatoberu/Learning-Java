@@ -1,13 +1,18 @@
 import java.lang.Math;
 import java.util.ArrayList;
+import java.lang.Integer;
 
 class MakingList{	
-	public static void main(String[] args){
-		ArrayList rArray = new ArrayList();
-		int limit = 5;
-		for (int x = 1; x <= limit; x++){
-			rArray.add((int) (Math.random() * 100));;
+	public static ArrayList createArray(int size){
+		// Initializing the array
+		ArrayList<Integer> rArray = new ArrayList();
+		
+		// Create the array with random integers
+		for (int x = 1; x <= size; x++){
+			rArray.add((int) (Math.random() * 100));
 		}
-		System.out.println(rArray);
+		
+		// Returning the array
+		return rArray;
 	}
 }
